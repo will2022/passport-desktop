@@ -7,19 +7,19 @@ version = "0.1.0"
 crate-type = ["cdylib"]
 
 [dependencies]
-napi = { version = "2.13.3", default-features = false, features = [
+napi = { version = "2.16.12", default-features = false, features = [
     "napi4",
     "napi6",
     "tokio_rt",
     "deferred_trace"
 ] }
-napi-derive = "2.13.0"
-tokio = "1.32.0"
-futures = "0.3.28"
+napi-derive = "2.16.12"
+tokio = "1.40.0"
+futures = "0.3.31"
 
 [target.'cfg(windows)'.dependencies]
-widestring = "1.0.2"
-windows = { version = "0.51.1", features = [
+widestring = "1.1.0"
+windows = { version = "0.58.0", features = [
     "Foundation",
     "Security_Credentials_UI",
     "Security_Cryptography",
@@ -33,7 +33,7 @@ windows = { version = "0.51.1", features = [
 ] }
 
 [build-dependencies]
-napi-build = "2.0.1"
+napi-build = "2.1.3"
 
 [profile.release]
 lto = true

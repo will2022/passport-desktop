@@ -190,7 +190,7 @@ impl Passport {
         check_account_exists!(self.account_exists);
         KeyCredentialManager::DeleteAsync(&HSTRING::from(&self.account_id))
             .map_napi_error()?
-            .await
+            .get()
             .map_napi_error()?;
 
         *self.account_exists.lock().unwrap() = false;
@@ -324,7 +324,7 @@ impl Passport {
         VerificationResult::try_from(
             UserConsentVerifier::RequestVerificationAsync(&HSTRING::from(message))
                 .map_napi_error()?
-                .await
+                .get()
                 .map_napi_error()?,
         )
     }

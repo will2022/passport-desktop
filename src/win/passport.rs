@@ -12,14 +12,14 @@ pub async fn create_passport_key(
         &HSTRING::from(account_id),
         create_option.unwrap_or(KeyCredentialCreationOption::ReplaceExisting),
     )?
-    .await?
+    .get()?
     .Status()
 }
 
 pub async fn get_passport_account(
     account_id: &String,
 ) -> windows::core::Result<KeyCredentialRetrievalResult> {
-    KeyCredentialManager::OpenAsync(&HSTRING::from(account_id))?.await
+    KeyCredentialManager::OpenAsync(&HSTRING::from(account_id))?.get()
 }
 
 pub fn get_passport_account_sync(
