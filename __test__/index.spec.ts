@@ -5,7 +5,7 @@ import {
     Passport,
     PublicKeyEncoding,
     VerificationResult,
-} from '../.';
+} from '../native.js';
 import { createPublicKey, createVerify, randomBytes } from 'crypto';
 import isCi from 'is-ci';
 

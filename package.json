@@ -49,11 +49,11 @@
     },
     "ava": {
         "timeout": "3m",
-        "extensions": {
-            "ts": "module"
-        },
-        "nodeArguments": [
-            "--loader=tsx"
+        "extensions": [
+            "ts"
+        ],
+        "require": [
+            "tsx"
         ]
     },
     "engines": {
