@@ -87,6 +87,7 @@ function createDummy<Key extends IndexKeys, IsClass extends boolean>(
                         ...prev,
                         [cur]: {
                             [key]: (
+                                // @ts-expect-error
                                 ...args: Parameters<IndexTypes[Key][typeof cur]>
                             ) => {
                                 if (opts.overrides && opts.overrides[cur]) {
