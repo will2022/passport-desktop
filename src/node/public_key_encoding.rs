@@ -1,4 +1,3 @@
-use napi::bindgen_prelude::{FromNapiValue, ToNapiValue};
 use windows::Security::Cryptography::Core::CryptographicPublicKeyBlobType;
 
 #[napi]
