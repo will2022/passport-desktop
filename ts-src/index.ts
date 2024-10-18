@@ -1,6 +1,6 @@
 import { createDummies, DummyType } from './dummies';
 
-export = createDummies({
+export default createDummies({
     Passport: {
         isClass: true,
         dummies: {
